@@ -13,6 +13,151 @@
 }
 
 body {
-  font-family: "Overpass", sans-serif;
   margin: 0;
+  background-color: var(--very-dark-blue);
+  font-family: "Overpass", sans-serif;
+  font-size: 0.875rem;
+}
+
+main {
+  height: 100vh;
+  min-height: 100vh;
+  height: 100dvh;
+  min-height: 100dvh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heading,
+.paragraph {
+  margin: 0;
+}
+
+.heading {
+  color: var(--white);
+}
+
+.paragraph {
+  color: var(--light-grey);
+}
+
+.show {
+  display: flex !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+#interactive-rating-component {
+  width: 90%;
+  max-width: 22.5rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background-color: var(--dark-blue);
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rating span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: hsl(210, 19%, 20%);
+}
+
+.rating ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.rating ul li input[type="radio"] {
+  display: none;
+}
+
+.rating ul li label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: hsl(210, 19%, 25%);
+  font-weight: 700;
+  color: var(--light-grey);
+  cursor: pointer;
+  transition: background-color 0.1s linear, color 0.1s linear;
+}
+
+.rating ul li input[type="radio"]:checked + label {
+  background-color: var(--white);
+}
+
+.rating ul li label:hover {
+  background-color: var(--orange);
+}
+
+.rating ul li input[type="radio"]:checked + label,
+.rating ul li label:hover {
+  color: var(--dark-blue);
+}
+
+.rating button {
+  outline: none;
+  border: none;
+  border-radius: 100rem;
+  padding: 0.875rem;
+  background-color: var(--orange);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+  letter-spacing: 0.125rem;
+  cursor: pointer;
+  transition: background-color 0.1s linear, color 0.1s linear;
+}
+
+.rating button:hover {
+  background-color: var(--white);
+}
+
+.rating button:disabled {
+  background-color: var(--dark-blue);
+  color: var(--light-grey);
+  cursor: not-allowed;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.review span:last-of-type {
+  border-radius: 100rem;
+  padding: 0.625rem;
+  background-color: hsl(210, 19%, 20%);
+  color: var(--orange);
+  text-align: center;
+}
+
+.review .heading,
+.review .paragraph {
+  text-align: center;
 }
